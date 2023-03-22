@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>We’re launching soon</h1>
+        <div class="timer-div">
+            <div class="days-back-div">
+                <div class="down-div"></div>
+                <div class="up-div"><h2 id="days"></h2></div>
+                <div class="down-div-sticky"></div>
+                <hr>
+                <img src="Oval Copy.png" class="left-oval">
+                <img src="Oval Copy.png" class="right-oval"> 
+            </div>
+            <div class="hours-back-div">
+                <div class="down-div"></div>
+                <div class="up-div"><h2 id="hours"></h2></div>
+                <div class="down-div-sticky"></div>
+                <hr>
+                <img src="Oval Copy.png" class="left-oval">
+                <img src="Oval Copy.png" class="right-oval"> 
+            </div>
+            <div class="minutes-back-div">
+                <div class="down-div-minutes"></div>
+                <div class="up-div"><h2 id="minutes"></h2></div>
+                <div class="down-div-sticky"></div>
+                <hr>
+                <img src="Oval Copy.png" class="left-oval">
+                <img src="Oval Copy.png" class="right-oval"> 
+            </div>
+            <div class="main-div">
+                <div class="second-back-div">
+                    <div class="down-div-seconds"></div>
+                    <div class="up-div"><h2 id="seconds"></h2></div>
+                    <div class="down-div-sticky"></div>
+                    <hr>
+                    <img src="Oval Copy.png" class="left-oval">
+                    <img src="Oval Copy.png" class="right-oval"> 
+                </div>
+            </div>
+        </div>
+        <div class="days">
+            <p>DAYS</p>
+            <p>HOURS</p>
+            <p>MINUTES</p>
+            <p>SECONDS</p>
+        </div>
+    </section>
+    <footer>
+        <div class="media-div">
+            <a href="https://www.facebook.com/" target="_blank">
+                <span class="icon fb-icon"></span>
+            </a>
+            <a href="https://www.pinterest.com/" target="_blank">
+                <span class="icon pinterest-icon"></span>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <span class="icon instagram-icon"></span>
+            </a>
+        </div>
+        <img src="pattern-hills.svg" alt="hills-img" class="hills-img">
+    </footer>
+    <script>
+        let countDownDate = new Date("APR 4, 2024 20:24:00").getTime();
+        const secondBackDiv = document.querySelector(".minutes-div")
+        const downDiv = document.querySelector(".down-div")
+        
+        let x = setInterval(function() {
+        let now = new Date().getTime();
+        let distance = countDownDate - now;
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+        let value = 6;
+        if (seconds > 0 ) {
+                    document.querySelector(".down-div-seconds").style.display = 'inline'
+                }
+        }, 1000);
+    </script>
+</body>
+</html>

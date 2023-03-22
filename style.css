@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@1,700&display=swap');
+body{
+    background-color: #1D1E28;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(bg-stars.svg);
+}
+h1{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 6.13636px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 142px 24px 0px 24px;
+    width: 327px;
+    }
+p{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 7px;
+    line-height: 9px;
+    letter-spacing: 2.95937px;
+    color: #8385A9;
+    width: 70px;
+}
+.days{
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    margin-top: 9px;
+}
+.media-div{
+    display: flex;
+    gap: 32px;
+    position: absolute;
+    margin-top: 96px;
+}
+footer{
+    margin-top: 165px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 66px;
+    letter-spacing: -1.08px;
+    color: #FB5E84;
+}
+.timer-div{
+    display: flex;
+    gap: 15px;
+    padding: 0px 24px 0px 24px;
+    margin-top: 54px;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    display: inline-block;
+}
+.fb-icon{
+    background-image: url(icon-facebook.svg);
+}
+.fb-icon:hover,
+.fb-icon:focus{
+    background-image: url(icon-facebook-red.svg);
+}
+.pinterest-icon{
+    background-image: url(icon-pinterest.svg);
+}
+.pinterest-icon:hover,
+.pinterest-icon:focus{
+    background-image: url(icon-pinterest-red.svg);
+}
+.instagram-icon{
+    background-image: url(icon-instagram.svg);
+}
+.instagram-icon:hover,
+.instagram-icon:focus{
+    background-image: url(icon-instagram-red.svg);
+}
+
+.main-div{
+    box-shadow: 0px 4px 0px #191A23;
+    border-radius: 8px;
+}
+.up-div{
+    width: 70px;
+    height: 33px;
+    opacity: 70%;
+    background-color: #343650;
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
+}
+.down-div, .down-div-seconds{
+    width: 70px;
+    height: 33px;
+    background-color: #343650;
+    border-radius: 8px;
+    position: absolute;
+    margin-top: 277px;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    display: none;
+} 
+@keyframes example {
+    from {top: 0px;}
+    to {top: -33px;}
+  }
+.down-div-sticky{
+    width: 70px;
+    height: 33px;
+    background-color: #343650;
+    border-radius: 0px 0px 8px 8px;
+}
+.minutes-back-div{
+    width: 70px;
+    height: 66px;
+    box-shadow: 0px 4px 0px #191A23;
+    border-radius: 8px;
+}
+.hours-back-div{
+    box-shadow: 0px 4px 0px #191A23;
+    border-radius: 8px;
+}
+.days-back-div{
+    box-shadow: 0px 4px 0px #191A23;
+    border-radius: 8px;
+}
+hr{
+    width: 70px;
+    height: 1px;
+    background-color: #000000;
+    opacity: 25%;
+    position: absolute;
+    border: 0;
+    margin: 0px;
+    margin-top: -35px;
+}
+.left-oval{
+    transform: rotate(180deg);
+    position: absolute;
+    margin-top: -41px;
+}
+.right-oval{
+    position: absolute;
+    margin-top: -41px;
+    margin-left: 64px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (min-width: 1440px){
+    h1{
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        width: 433px;
+        padding: 132px 505px 0px 505px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 7.5px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    .up-div{
+        width: 148px;
+        height: 70px;
+    }
+    .down-div-sticky{
+        width: 148px;
+        height: 70px;
+    }
+    .down-div, .down-div-seconds {
+        width: 148px;
+        height: 70px;
+        background-color: #343650;
+        border-radius: 8px;
+        position: absolute;
+        margin-top: 335px;
+        animation-name: example;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        display: none;
+    }
+    .second-back-div{
+        margin-left: 76px;
+    }
+    hr{
+        width: 148px;
+        margin-top: -69px;
+    }
+    .left-oval{
+        margin-top: -74px;
+    }
+    .right-oval{
+        margin-top: -74px;
+        margin-left: 143px;
+    }
+    h2{
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 71px;
+        letter-spacing: -2.4px;
+        color: #FB5E84;
+    }
+    @keyframes example {
+        from {top: 0px;}
+        to {top: -70px;}
+      }
+      #days{
+        position: absolute;
+        margin-top: 36px;
+      }
+      #hours{
+        position: absolute;
+        margin-top: 36px;
+        margin-left: 25px;
+      }
+      #minutes{
+        position: absolute;
+        margin-top: 36px;
+        margin-left: 25px;
+      }
+      #seconds{
+        margin-top: 36px;
+        position: absolute;
+        margin-left: 29px;
+      }
+      p{
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 5.91875px;
+        color: #8385A9;
+        width: 148px;
+        height: 18px;
+      }
+      .days{
+        display: flex;
+        gap: 15px;
+        text-align: center;
+        margin-top: 16px;
+      }
+      .timer-div{
+        display: flex;
+        gap: 15px;
+        padding: 0px 24px 0px 24px;
+        margin-top: 104px;
+      }
+      .hills-img{
+        width: 100%;
+      }
+      footer{
+        position: absolute;
+        bottom: 0;
+      }
+}
